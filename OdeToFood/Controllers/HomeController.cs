@@ -8,12 +8,14 @@ namespace OdeToFood.Controllers
 {
     public class HomeController : Controller
     {
+
+        OdeToFoodDb _db = new OdeToFoodDb();
         public ActionResult Index()
         {
-            var controller = RouteData.Values["controller"];
+            /*var controller = RouteData.Values["controller"];
             var action = RouteData.Values["action"];
             var id = RouteData.Values["id"];
-            ViewBag.message = $"{controller} :: {action} - {id}";
+            ViewBag.message = $"{controller} :: {action} - {id}";*/
             return View();
         }
 
@@ -30,5 +32,10 @@ namespace OdeToFood.Controllers
 
             return View();
         }
+    }
+
+    public class OdeToFoodDb : DbContext
+    {
+
     }
 }

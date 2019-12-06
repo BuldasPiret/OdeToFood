@@ -1,6 +1,13 @@
-﻿body {
+﻿
+Kristo Lebin
+10:21 AM (1 minute ago)
+to me
+
+body {
+    background-color: #ecfcff;
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -9,8 +16,11 @@
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
+.jumbotron {
+    background-color: #b2fcff;
+}
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
 */
 .dl-horizontal dt {
     white-space: normal;
@@ -21,4 +31,27 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.review {
+    padding: 2px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+    .review h4 {
+        color: black;
+        padding: 5px;
+        background: #b2fcff;
+    }
+
+.reviev span {
+    font-size: .8em;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 225px;
 }
