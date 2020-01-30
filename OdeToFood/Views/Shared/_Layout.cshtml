@@ -16,23 +16,26 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Ode To Food", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
+                    <li>@Html.ActionLink("Reviews", "Index", "Reviews/LatestReviews")</li>
+                    <li>@Html.ActionLink("Restaurants", "Index", "Restaurants")</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <img class="logo" src="~/images/7e2206da-35be-43f9-8bf3-3ea45d70af73_200x200.png" />
         @RenderBody()
         <hr />
         <div>
-            @Html.Action("BestReview", "Reviews" )
+            <h4>Best Review</h4>
+            @Html.Action("BestReview", "Reviews")
         </div>
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
@@ -40,6 +43,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

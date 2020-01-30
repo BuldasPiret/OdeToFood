@@ -1,38 +1,7 @@
-﻿@model IEnumerable<OdeToFood.Models.RestaurantReview>
-
-@{
-    ViewBag.Title = "Index";
-    var firstReview = Model.First();
-}
-
-@section features{
-
-    We are showing the latest @Model.Count() reviews
-}
-
-@firstReview.Name
-
-<h2>The Latest Reviews</h2>
-
-We are showing the latest @Model.Count() reviews
-
-@foreach (var item in Model)
-{
-
-    @Html.Partial("_Review", item)
-
-    /*<div class=" = " review">
-        <h4>@item.Name</h4>
-        <span>@item.Rating</span>
-        <p>@item.City, @item.Country</p>
-
-        <span class="right">
-            @Html.ActionLink("Edit", "Edit", new {  id = item.Id})
-        </span>
-    </div>*/
-}
-
+﻿@model OdeToFood.Models.Restaurant
+<h2>Reviews for @Model.Name</h2>
+@Html.Partial("_Reviews", Model.Reviews)
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", new { RestaurantId = Model.Id });
 </p>
 
